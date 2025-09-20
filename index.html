@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mara & Julio — Invitación</title>
+  <meta name="description" content="Invitación digital con animación de sobre y sello, itinerario, mapa y RSVP por WhatsApp." />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SOBRE + SELLO -->
+  <section class="invite-scene" aria-label="Sobre con sello interactivo">
+    <div class="invite-envelope">
+      <img class="invite-envelope-img" src="img/envelope.png" alt="Sobre" />
+      <button class="invite-seal" type="button" aria-label="Abrir invitación" data-open>
+        <span aria-hidden="true">✦</span>
+      </button>
+    </div>
+    <p class="invite-hint">Toca el sello para abrir</p>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="main" class="invite-main" aria-hidden="true">
+    <header class="hero">
+      <img class="hero-img" src="img/hero.jpg" alt="Portada" onerror="this.style.display='none'">
+      <h1 class="hero-title" data-bind="title">Mara & Julio</h1>
+      <p class="hero-sub" data-bind="subtitle">¡Nos casamos!</p>
+      <div class="hero-pills">
+        <span class="pill" id="countdown" aria-live="polite">Faltan — días</span>
+        <span class="pill" data-bind="dateText">Viernes 28 de noviembre · 17:00 h</span>
+        <span class="pill" data-bind="placeShort">SJV</span>
+      </div>
+      <a class="btn primary" href="#itinerary">Ver itinerario</a>
+    </header>
+
+    <section class="card grid-2">
+      <div>
+        <h2>Detalles del evento</h2>
+        <dl class="details">
+          <div><dt>Fecha</dt><dd data-bind="dateLong">28 de noviembre de 2025</dd></div>
+          <div><dt>Hora</dt><dd data-bind="time">17:00</dd></div>
+          <div><dt>Lugar</dt><dd><span data-bind="placeName">Parroquia San José El Vidrio</span> — <span data-bind="placeShort">SJV</span></dd></div>
+          <div><dt>Dress code</dt><dd data-bind="dressCode">Formal</dd></div>
+        </dl>
+        <p class="lead" data-bind="welcome">Nos encantará compartir este día contigo. Aquí encontrarás itinerario, ubicación y más detalles.</p>
+        <div class="quick-links">
+          <a class="btn" id="linkChurch" target="_blank" rel="noopener">Parroquia</a>
+          <a class="btn" id="linkSalon" target="_blank" rel="noopener">Salón</a>
+        </div>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <iframe id="map" title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="tiny">Cambia la dirección en <code>js/main.js</code> si prefieres mostrar el salón.</p>
+      </div>
+    </section>
+
+    <section id="itinerary" class="card">
+      <h2>Itinerario</h2>
+      <ul class="timeline" id="timeline"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Galería</h2>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="card" id="rsvp">
+      <h2>Confirmar asistencia</h2>
+      <form class="rsvp" onsubmit="return false;">
+        <label>Nombre completo
+          <input name="name" required placeholder="Tu nombre">
+        </label>
+        <label>¿Asistirás?
+          <select name="attend">
+            <option value="yes">Sí, allí estaré</option>
+            <option value="maybe">Tal vez asistiré</option>
+            <option value="no">No podré asistir</option>
+          </select>
+        </label>
+        <button class="btn primary" type="button" id="rsvpBtn">Enviar por WhatsApp</button>
+        <p class="tiny">Se abrirá WhatsApp con tu confirmación prellenada (o se copiará el mensaje).</p>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <a href="#" id="replay">Repetir animación</a>
+      <span class="sep">·</span>
+      <span class="muted">Hecho con ❤</span>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
