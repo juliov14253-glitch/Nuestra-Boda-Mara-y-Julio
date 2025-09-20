@@ -10,7 +10,7 @@
 
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+  
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -26,69 +26,27 @@
   </header>
 
   <!-- Itinerario -->
- <section id="itinerario" data-aos="fade-up" class="py-12 bg-amber-50 rounded-xl shadow-lg p-8 max-w-sm mx-auto my-12 text-center">
-<h2 class="text-3xl font-bold mb-4">Itinerario</h2>
-<div class="relative w-full overflow-hidden">
-<!-- Contenido del carrusel -->
-<div id="itinerary-carousel" class="flex transition-transform duration-500 ease-in-out">
-<!-- Ceremonia -->
-<div id="slide-1" class="w-full flex-shrink-0 text-center">
-<h3 class="text-xl font-semibold mb-2">Ceremonia</h3>
-<p class="text-gray-600 mb-2">5:45 PM</p>
-<p class="text-gray-600">Parroquia San José el Vidrio</p>
-</div>
-<!-- Recepción -->
-<div id="slide-2" class="w-full flex-shrink-0 text-center hidden">
-<h3 class="text-xl font-semibold mb-2">Recepción</h3>
-<p class="text-gray-600 mb-2">7:40 PM</p>
-<p class="text-gray-600">Salón La Toscana SJV</p>
-</div>
-</div>
+  <section id="itinerario" data-aos="fade-up" class="py-12">
+    <div class="bg-amber-50 rounded-xl shadow-lg p-8 max-w-sm mx-auto my-12 text-center">
+        <h2 class="text-3xl font-bold mb-6">Itinerario</h2>
+        <!-- Contenido del itinerario vertical -->
+        <div class="space-y-6">
+            <!-- Ceremonia -->
+            <div>
+                <h3 class="text-xl font-semibold mb-1">Ceremonia</h3>
+                <p class="text-gray-600 mb-1">5:45 PM</p>
+                <p class="text-gray-600">Parroquia San José el Vidrio</p>
+            </div>
+            <!-- Recepción -->
+            <div>
+                <h3 class="text-xl font-semibold mb-1">Recepción</h3>
+                <p class="text-gray-600 mb-1">7:40 PM</p>
+                <p class="text-gray-600">Salón La Toscana SJV</p>
+            </div>
+        </div>
+    </div>
+  </section>
 
-<!-- Botones de navegación -->
-<button id="prev-btn" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-  </svg>
-</button>
-<button id="next-btn" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-  </svg>
-</button>
-
-</div>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-const carousel = document.getElementById('itinerary-carousel');
-const slides = carousel.children;
-const totalSlides = slides.length;
-let currentSlide = 0;
-
-    const prevBtn = document.getElementById(&#39;prev-btn&#39;);
-    const nextBtn = document.getElementById(&#39;next-btn&#39;);
-
-    function updateCarousel() {
-        for (let i = 0; i &lt; totalSlides; i++) {
-            slides[i].classList.add(&#39;hidden&#39;);
-        }
-        slides[currentSlide].classList.remove(&#39;hidden&#39;);
-    }
-
-    prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    });
-
-    nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-    });
-});
-
-</script>
 
  <!-- Ubicación -->
   <section id="ubicacion" data-aos="fade-up">
@@ -105,29 +63,29 @@ let currentSlide = 0;
     </iframe>
   </section>
 
-  <!-- Comienzo del fragmento de confirmación de WhatsApp -->
-  <section id="confirmacion" data-aos="fade-up" class="py-12">
-    <div class="bg-amber-50 rounded-xl shadow-lg p-8 max-w-sm w-full text-center mx-auto my-12">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">¡Confirma tu asistencia!</h1>
-        <p class="text-gray-600 mb-6">Haz clic en el botón para confirmar tu asistencia a través de WhatsApp.</p>
-        
-        <!-- Botones de WhatsApp -->
-        <div class="flex flex-col space-y-4 items-center">
-            <!-- Botón para el primer número -->
-            <a id="whatsapp-link-1" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
-                Confirmar con Mara
-            </a>
-            <!-- Botón para el segundo número -->
-            <a id="whatsapp-link-2" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
-                Confirmar con Julio
-         
-            </a>
-        </div>
-        
-        <p class="mt-4 text-sm text-gray-500">Se abrirá la aplicación de WhatsApp con un mensaje preescrito.</p>
-    </div>
-  </section>
-  <!-- Fin del fragmento de confirmación de WhatsApp -->
+  <!-- Comienzo del fragmento de confirmación de WhatsApp -->
+  <section id="confirmacion" data-aos="fade-up" class="py-12">
+    <div class="bg-amber-50 rounded-xl shadow-lg p-8 max-w-sm w-full text-center mx-auto my-12">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">¡Confirma tu asistencia!</h1>
+        <p class="text-gray-600 mb-6">Haz clic en el botón para confirmar tu asistencia a través de WhatsApp.</p>
+        
+        <!-- Botones de WhatsApp -->
+        <div class="flex flex-col space-y-4 items-center">
+            <!-- Botón para el primer número -->
+            <a id="whatsapp-link-1" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+                Confirmar con Mara
+            </a>
+            <!-- Botón para el segundo número -->
+            <a id="whatsapp-link-2" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+                Confirmar con Julio
+         
+            </a>
+        </div>
+        
+        <p class="mt-4 text-sm text-gray-500">Se abrirá la aplicación de WhatsApp con un mensaje preescrito.</p>
+    </div>
+  </section>
+  <!-- Fin del fragmento de confirmación de WhatsApp -->
 
   <!-- Regalos -->
   <section id="regalos" data-aos="fade-up">
@@ -144,25 +102,25 @@ let currentSlide = 0;
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Arreglo de objetos con los números de teléfono y los IDs de los enlaces.
-            const links = [
-                { id: 'whatsapp-link-1', phoneNumber: '525570515544' },
-                { id: 'whatsapp-link-2', phoneNumber: '525566983206' },
-            ];
+        document.addEventListener('DOMContentLoaded', () => {
+            // Arreglo de objetos con los números de teléfono y los IDs de los enlaces.
+            const links = [
+                { id: 'whatsapp-link-1', phoneNumber: '525570515544' },
+                { id: 'whatsapp-link-2', phoneNumber: '525566983206' },
+            ];
 
-            const message = "¡Hola! Confirmo mi asistencia al evento.";
-            const encodedMessage = encodeURIComponent(message);
+            const message = "¡Hola! Confirmo mi asistencia al evento.";
+            const encodedMessage = encodeURIComponent(message);
 
-            // Itera sobre el arreglo y asigna el enlace a cada botón.
-            links.forEach(link => {
-                const element = document.getElementById(link.id);
-                if (element) {
-                    element.href = `https://wa.me/${link.phoneNumber}?text=${encodedMessage}`;
-                }
-            });
-        });
-    </script>
+            // Itera sobre el arreglo y asigna el enlace a cada botón.
+            links.forEach(link => {
+                const element = document.getElementById(link.id);
+                if (element) {
+                    element.href = `https://wa.me/${link.phoneNumber}?text=${encodedMessage}`;
+                }
+            });
+        });
+    </script>
   <script src="script.js"></script>
 </body>
 </html>
