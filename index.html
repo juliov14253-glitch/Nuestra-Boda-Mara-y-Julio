@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boda Mara y Julio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boda Mara y Julio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
 
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Portada -->
-  <header>
-    <h1 data-aos="fade-down">Mara y Julio</h1>
-    <p data-aos="fade-up">¡Nos casamos!</p>
-    <div id="countdown" data-aos="zoom-in"></div>
-  </header>
+  <!-- Portada -->
+  <header>
+    <h1 data-aos="fade-down">Mara y Julio</h1>
+    <p data-aos="fade-up">¡Nos casamos!</p>
+    <div id="countdown" data-aos="zoom-in"></div>
+  </header>
 
-  <!-- Itinerario -->
-  <section id="itinerario" data-aos="fade-up">
-    <h2>Itinerario</h2>
-    <ul>
-      <li><b>Ceremonia:</b> 5:45 PM - Parroquia San José el Vidrio</li>
-      <li><b>Recepción:</b> 7:40 PM - Salón La Toscana SJV</li>
-    </ul>
-  </section>
+  <!-- Itinerario -->
+  <section id="itinerario" data-aos="fade-up">
+    <h2>Itinerario</h2>
+    <ul>
+      <li><b>Ceremonia:</b> 5:45 PM - Parroquia San José el Vidrio</li>
+      <li><b>Recepción:</b> 7:40 PM - Salón La Toscana SJV</li>
+    </ul>
+  </section>
 
- <!-- Ubicación -->
-  <section id="ubicacion" data-aos="fade-up">
-    <h2>Ubicación</h2>
-    <p>Parroquia San José el Vidrio</p>
-    <iframe 
-      src="https://maps.app.goo.gl/o9MuE9Zfy4xxydZE7"
-      width="100%" height="250" allowfullscreen="">
-    </iframe>
-    <p>Salón La Toscana SJV</p>
-    <iframe 
-      src="https://maps.app.goo.gl/GgRNSyCZKo1xmxzS9"
-      width="100%" height="250" allowfullscreen="">
-    </iframe>
-  </section>
+ <!-- Ubicación -->
+  <section id="ubicacion" data-aos="fade-up">
+    <h2>Ubicación</h2>
+    <p>Parroquia San José el Vidrio</p>
+    <iframe 
+      src="https://maps.app.goo.gl/o9MuE9Zfy4xxydZE7"
+      width="100%" height="250" allowfullscreen="">
+    </iframe>
+    <p>Salón La Toscana SJV</p>
+    <iframe 
+      src="https://maps.app.goo.gl/GgRNSyCZKo1xmxzS9"
+      width="100%" height="250" allowfullscreen="">
+    </iframe>
+  </section>
 
   <!-- Comienzo del fragmento de confirmación de WhatsApp -->
   <section id="confirmacion" data-aos="fade-up" class="py-12">
@@ -55,45 +55,62 @@
         <h1 class="text-2xl font-bold text-gray-800 mb-4">¡Confirma tu asistencia!</h1>
         <p class="text-gray-600 mb-6">Haz clic en el botón para confirmar tu asistencia a través de WhatsApp.</p>
         
-        <!-- Botón de WhatsApp -->
-        <a id="whatsapp-link" href="#" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
-            Confirmar por WhatsApp
-        </a>
+        <!-- Botones de WhatsApp -->
+        <div class="flex flex-col space-y-4 items-center">
+            <!-- Botón para el primer número -->
+            <a id="whatsapp-link-1" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+                Confirmar con Mara
+            </a>
+            <!-- Botón para el segundo número -->
+            <a id="whatsapp-link-2" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+                Confirmar con Julio
+            </a>
+             <!-- Botón para el tercer número -->
+            <a id="whatsapp-link-3" href="#" target="_blank" class="inline-block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+                Confirmar con la boda
+            </a>
+        </div>
         
         <p class="mt-4 text-sm text-gray-500">Se abrirá la aplicación de WhatsApp con un mensaje preescrito.</p>
     </div>
   </section>
   <!-- Fin del fragmento de confirmación de WhatsApp -->
 
+  <!-- Regalos -->
+  <section id="regalos" data-aos="fade-up">
+    <h2>Sugerencias de regalo</h2>
+    <p>Lo más importante es tu presencia, pero si deseas hacernos un detalle, aquí están nuestras opciones:</p>
+    <a href="https://www.amazon.com.mx/wedding/share/Mara-Julio" target="_blank" class="btn">Ver mesa de regalos</a>
+    <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51755294" target="_blank" class="btn">Ver mesa de regalos</a>
+  </section>
 
-  </section>
+  <footer>
+    <p>Con cariño, Mara y Julio ❤️</p>
+  </footer>
 
-  <!-- Regalos -->
-  <section id="regalos" data-aos="fade-up">
-    <h2>Sugerencias de regalo</h2>
-    <p>Lo más importante es tu presencia, pero si deseas hacernos un detalle, aquí están nuestras opciones:</p>
-    <a href="https://www.amazon.com.mx/wedding/share/Mara-Julio" target="_blank" class="btn">Ver mesa de regalos</a>
-    <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51755294" target="_blank" class="btn">Ver mesa de regalos</a>
-  </section>
-
-  <footer>
-    <p>Con cariño, Mara y Julio ❤️</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Reemplaza con el número de teléfono (código de país sin el signo +) y el mensaje deseado.
-            const phoneNumber = "525512345678"; // Ejemplo para México
+            // Arreglo de objetos con los números de teléfono y los IDs de los enlaces.
+            const links = [
+                { id: 'whatsapp-link-1', phoneNumber: '525566983206' },
+                { id: 'whatsapp-link-2', phoneNumber: '525570515544' },
+                { id: 'whatsapp-link-3', phoneNumber: '525512345678' }
+            ];
+
             const message = "¡Hola! Confirmo mi asistencia al evento.";
-            
             const encodedMessage = encodeURIComponent(message);
-            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
-            document.getElementById('whatsapp-link').href = whatsappLink;
+
+            // Itera sobre el arreglo y asigna el enlace a cada botón.
+            links.forEach(link => {
+                const element = document.getElementById(link.id);
+                if (element) {
+                    element.href = `https://wa.me/${link.phoneNumber}?text=${encodedMessage}`;
+                }
+            });
         });
     </script>
-  <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
