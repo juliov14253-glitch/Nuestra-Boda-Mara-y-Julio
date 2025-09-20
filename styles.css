@@ -8,7 +8,7 @@ body {
 
 header {
   height: 100vh;
-  background: url('fondo.jpeg') no-repeat center/cover;
+  background: url('fondo1.jpeg') no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
