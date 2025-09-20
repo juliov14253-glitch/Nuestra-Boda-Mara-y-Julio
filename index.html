@@ -51,7 +51,50 @@
   <!-- RSVP -->
   <section id="rsvp" data-aos="fade-up">
     <h2>Confirma tu asistencia, gracias</h2>
-    <a href="https://forms.gle/tuFormulario" target="_blank" class="btn">Confirmar asistencia</a>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Asistencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 max-w-sm w-full text-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">¡Confirma tu asistencia!</h1>
+        <p class="text-gray-600 mb-6">Haz clic en el botón para confirmar tu asistencia a través de WhatsApp.</p>
+        
+        <!-- Botón de WhatsApp -->
+        <a id="whatsapp-link" href="#" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-md">
+            Confirmar por WhatsApp
+        </a>
+        
+        <p class="mt-4 text-sm text-gray-500">Se abrirá la aplicación de WhatsApp con un mensaje preescrito.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Reemplaza con el número de teléfono (código de país sin el signo +) y el mensaje deseado.
+            const phoneNumber = "525512345678"; // Ejemplo para México
+            const message = "¡Hola! Confirmo mi asistencia al evento.";
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            document.getElementById('whatsapp-link').href = whatsappLink;
+        });
+    </script>
+
+</body>
+</html>
+
   </section>
 
   <!-- Regalos -->
