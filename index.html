@@ -26,13 +26,69 @@
   </header>
 
   <!-- Itinerario -->
-  <section id="itinerario" data-aos="fade-up">
-    <h2>Itinerario</h2>
-    <ul>
-      <li><b>Ceremonia:</b> 5:45 PM - Parroquia San José el Vidrio</li>
-      <li><b>Recepción:</b> 7:40 PM - Salón La Toscana SJV</li>
-    </ul>
-  </section>
+ <section id="itinerario" data-aos="fade-up" class="py-12 bg-amber-50 rounded-xl shadow-lg p-8 max-w-sm mx-auto my-12 text-center">
+<h2 class="text-3xl font-bold mb-4">Itinerario</h2>
+<div class="relative w-full overflow-hidden">
+<!-- Contenido del carrusel -->
+<div id="itinerary-carousel" class="flex transition-transform duration-500 ease-in-out">
+<!-- Ceremonia -->
+<div id="slide-1" class="w-full flex-shrink-0 text-center">
+<h3 class="text-xl font-semibold mb-2">Ceremonia</h3>
+<p class="text-gray-600 mb-2">5:45 PM</p>
+<p class="text-gray-600">Parroquia San José el Vidrio</p>
+</div>
+<!-- Recepción -->
+<div id="slide-2" class="w-full flex-shrink-0 text-center hidden">
+<h3 class="text-xl font-semibold mb-2">Recepción</h3>
+<p class="text-gray-600 mb-2">7:40 PM</p>
+<p class="text-gray-600">Salón La Toscana SJV</p>
+</div>
+</div>
+
+<!-- Botones de navegación -->
+<button id="prev-btn" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+  </svg>
+</button>
+<button id="next-btn" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+</button>
+
+</div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const carousel = document.getElementById('itinerary-carousel');
+const slides = carousel.children;
+const totalSlides = slides.length;
+let currentSlide = 0;
+
+    const prevBtn = document.getElementById(&#39;prev-btn&#39;);
+    const nextBtn = document.getElementById(&#39;next-btn&#39;);
+
+    function updateCarousel() {
+        for (let i = 0; i &lt; totalSlides; i++) {
+            slides[i].classList.add(&#39;hidden&#39;);
+        }
+        slides[currentSlide].classList.remove(&#39;hidden&#39;);
+    }
+
+    prevBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    });
+});
+
+</script>
 
  <!-- Ubicación -->
   <section id="ubicacion" data-aos="fade-up">
