@@ -11,6 +11,9 @@
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+   <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,28 +49,9 @@
     </iframe>
   </section>
 
-
-
-  <!-- RSVP -->
-  <section id="rsvp" data-aos="fade-up">
-    <h2>Confirma tu asistencia, gracias</h2>
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmar Asistencia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-
-    <div class="bg-white rounded-xl shadow-lg p-8 max-w-sm w-full text-center">
+  <!-- Comienzo del fragmento de confirmación de WhatsApp -->
+  <section id="confirmacion" data-aos="fade-up" class="py-12">
+    <div class="bg-white rounded-xl shadow-lg p-8 max-w-sm w-full text-center mx-auto my-12">
         <h1 class="text-2xl font-bold text-gray-800 mb-4">¡Confirma tu asistencia!</h1>
         <p class="text-gray-600 mb-6">Haz clic en el botón para confirmar tu asistencia a través de WhatsApp.</p>
         
@@ -78,22 +62,9 @@
         
         <p class="mt-4 text-sm text-gray-500">Se abrirá la aplicación de WhatsApp con un mensaje preescrito.</p>
     </div>
+  </section>
+  <!-- Fin del fragmento de confirmación de WhatsApp -->
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Reemplaza con el número de teléfono (código de país sin el signo +) y el mensaje deseado.
-            const phoneNumber = "525512345678"; // Ejemplo para México
-            const message = "¡Hola! Confirmo mi asistencia al evento.";
-            
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
-            document.getElementById('whatsapp-link').href = whatsappLink;
-        });
-    </script>
-
-</body>
-</html>
 
   </section>
 
