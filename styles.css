@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #faf8f5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  background: url('fondo.jpeg') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+#countdown {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #c49b63;
+  font-family: 'Great Vibes', cursive;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+iframe {
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  background: #c49b63;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a87f4d;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
